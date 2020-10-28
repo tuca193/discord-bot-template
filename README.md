@@ -38,7 +38,7 @@ Quarto passo depois de aprender como criar seu comando, vou lhe ensinar a criar 
 this.on('eventName', param => {
 * script
 })
-
+```
 
 # Dependências
 

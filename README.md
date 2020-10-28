@@ -17,6 +17,7 @@ Terceiro passo depois de configurado se quiser criar um comando procure a pasta 
 * No comando escolha o nome do arquivo e finalize com .js para criar um arquivo em javascript.
 * No arquivo já criado coloque a base do comando: 
 
+```js
 module.exports = {
     help: {
         name: 'nome do comando',
@@ -30,7 +31,7 @@ module.exports = {
         * script
     }
 }
-
+```
 
 Quarto passo depois de aprender como criar seu comando, vou lhe ensinar a criar seu evento, vá no arquivo: public-source/structures/client.js e acima do evento message digite this.on('evento', parametro) e crie seu evento.
 

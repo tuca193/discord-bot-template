@@ -13,7 +13,8 @@ module.exports = {
     if(message.author.id !== 'SEU ID') return; // coloque seu id no lugar de SEU ID para ninguem a não ser você executar o comando.
      let evaled = eval(args.join(' '))
      try {
-         message.channel.send(`Result: \`\`\`${inspect(evaled, {
+         message.channel.send(`Result: \`\`\`js
+         ${inspect(evaled, {
              depth: 0
          })}\`\`\``)
      } catch (err) {

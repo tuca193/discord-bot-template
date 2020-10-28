@@ -1,8 +1,8 @@
 const fs = require('fs')
 
 module.exports = (client) => {
-    fs.readdirSync('../cmds').forEach(dir => {
-        const cmds = fs.readdirSync(`../cmds/${dir}`).filter(a => a.endsWith('.js'))
+    fs.readdirSync('./public-source/bot/cmds').forEach(dir => {
+        const cmds = fs.readdirSync(`./public-source/bot/cmds/${dir}`).filter(a => a.endsWith('.js'))
         for (let f of cmds) {
             let config = require(`../cmds/${dir}/${f}`)
             if (config.config.clientPerm) {

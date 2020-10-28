@@ -1,5 +1,4 @@
 const { Collection, Client } = require('discord.js')
-const { Server } = require('../server/server')
 const config = require('./config')
 const c = require('colors')
 
@@ -24,7 +23,7 @@ module.exports = class extends Client {
             if(message.author.bot) return;
             if(message.channel.type == 'DM') return;
             if(!message.content.startsWith(config.prefix)) return;
-            if(!message.author.hasPermission(command.config.userPerm)) return message.channel.send(`Parece que você não tem permissão suficiente para executar este comando.`)
+            if(!message.member.hasPermission(command.config.userPerm)) return message.channel.send(`Parece que você não tem permissão suficiente para executar este comando.`)
             if(!message.guild.me.hasPermission(command.config.clientPerm)) return message.channel.send(`Parece que eu não tenho permissão suficiente para executar este comando.`)
             // --------------------------------------------------- //
 
@@ -43,9 +42,7 @@ module.exports = class extends Client {
         })
 
         this.login(config.token).then(() => {
-            const server = new Server(this)
-            server.CreateServer()
-            console.log(`[ ${c.bgMagenta('BOT ONLINE')} ] - ${c.bgRed('LOGIN WITH SUCESS')}`)
+            console.log(`[ ${c.magenta('BOT ONLINE')} ] - ${c.red('LOGIN WITH SUCESS')}`)
         })
     }
 }

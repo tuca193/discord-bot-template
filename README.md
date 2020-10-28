@@ -42,6 +42,7 @@ Quarto passo depois de aprender como criar seu comando, vou lhe ensinar a criar 
 - fs | versão: 0.0.1-security
 - express | versão: 4.17.1
 - colors | versão: 1.4.0
+- axios | versão: 0.21.0
 
 Caso vá adicionar um comando ou arquivo que precise de alguma dependência é só baixar digitando o comando no console: npm install dependência --save
 

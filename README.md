@@ -25,6 +25,9 @@ module.exports = {
     config: {
         userPerm: 'permissão necessária',
         clientPerm: 'permissão necessária'
+    },
+    run: async (client, message, args) => {
+        * script
     }
 }
 

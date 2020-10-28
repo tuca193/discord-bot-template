@@ -33,7 +33,11 @@ module.exports = {
 }
 ```
 
-Quarto passo depois de aprender como criar seu comando, vou lhe ensinar a criar seu evento, vá no arquivo: public-source/structures/client.js e acima do evento message digite this.on('evento', parametro) e crie seu evento.
+Quarto passo depois de aprender como criar seu comando, vou lhe ensinar a criar seu evento, vá no arquivo: public-source/structures/client.js e acima do evento message digite 
+```js
+this.on('eventName', param => {
+* script
+})
 
 
 # Dependências
